@@ -3,3 +3,4 @@ Sami Munir | samidmunir@outlook.com | Rutgers University '24
 Intended for learning & chill programming...
 ## Learning
 * java-programming
+* rust-programming
