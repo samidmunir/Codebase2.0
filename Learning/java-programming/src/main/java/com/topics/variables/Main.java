@@ -2,6 +2,9 @@ package com.topics.variables;
 
 public class Main {
     /*
+        A Java variable is a data container or a named location (reference) capable of storing data. We can declare variables in Java by stating the data type, followed by the variable name/reference, and then an equals sign, and then finally the value want to store.
+        For Object variables, we can follow the same pattern but use the new keyword followed by a call to the Object/data-type's constructor.
+
         Java data types are categorized into two categories:
         - Primitive
         - Non-primitive

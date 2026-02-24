@@ -21,6 +21,10 @@ mod inventory {
     }
 }
 
+mod orders {
+    pub const MANAGER: &str = "Oliver Orderson";
+}
+
 fn main() {
     println!("\nWarehouse Project");
     println!(
@@ -28,6 +32,11 @@ fn main() {
     );
 
     println!("\nThe manager of our inventory is {}.", inventory::MANAGER);
-    println!("The available floor space is {} sqft.", inventory::FLOOR_SPACE);
+    println!(
+        "The available floor space is {} sqft.",
+        inventory::FLOOR_SPACE
+    );
     inventory::talk_to_manager();
+
+    println!("\nThe manager of our orders is {}.", orders::MANAGER);
 }
