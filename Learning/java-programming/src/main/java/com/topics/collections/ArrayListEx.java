@@ -1,7 +1,6 @@
 package com.topics.collections;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 /*
@@ -56,16 +55,6 @@ public class ArrayListEx {
         System.out.println("nums: " + nums);
         nums.add(0, 0); // adding 0 at index 0
         System.out.println("nums: " + nums);
-
-        List<String> fruits = new LinkedList<>();
-        fruits.add("bananas");
-        fruits.add("apples");
-        fruits.add("grapes");
-        fruits.add("lychee");
-        System.out.println("\nfruits: " + fruits);
-        fruits.remove("apples"); // removing apples element
-        System.out.println("fruits: " + fruits);
-        System.out.println("fruits.size(): " + fruits.size());
 
         ArrayList<Character> nameChars = new ArrayList<>();
         nameChars.add('S');
