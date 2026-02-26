@@ -47,15 +47,24 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Variables in Java\n-----------------");
         
+        /*
+            Rules for naming identifiers - the only allowed characters in Java identifiers are "a" -> "z", "A" -> "Z", 0 -> 9, "$", "_". We cannot use reserved words as identifiers. All predefined class names and interface names can be used as identifiers. Identifier names cannot stand with digits. Java identifiers are also case-sensitive.
+
+            Reserved words in Java are categorized into two categories: keywords and reserverd literals.
+        */
         int num = 7;
         System.out.println("\nint num = " + num);
 
         double PI = 3.14159d;
         System.out.println("double PI = " + PI);
 
-        float taxRate = 1.357f;
+        float taxRate = 1.357f; // must add f to declare value as float (double is default)
         System.out.println("float taxRate = " + taxRate);
 
+        /*
+            32-bit - 4 bytes
+            > can store unicode values as well (ASCII).
+        */
         char lastInitial = 'M';
         char dollarSign = '$';
         System.out.println("char lastInitial = " + lastInitial);
@@ -75,5 +84,8 @@ public class Main {
         
         short myShort = 4;
         System.out.println("short myShort = " + myShort);
+        
+        long myLong = 999999999;
+        System.out.println("long myLong = " + myLong);
     }
 }
