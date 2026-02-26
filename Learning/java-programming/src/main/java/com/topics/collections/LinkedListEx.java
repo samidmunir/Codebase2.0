@@ -17,9 +17,12 @@ public class LinkedListEx {
         * Non-synchronized collection.
         * Underlying data structure in Java is the doubly linked list.
         * Allows heterogeneous objects (also null).
+        
+        LinkedList is faster than ArrayList allowing faster manipulation. However, ArrayList is superior in random element access.
+        LinkedList acts as a list and a queue because it implements both List and Deque interfaces.
     */
     public static void main(String[] args) {
-        System.out.println("\nCollections in Java\n--------------------\n");
+        System.out.println("\nLinkedList in Java\n--------------------\n");
 
         List<String> fruits = new LinkedList<>();
         fruits.add("bananas");

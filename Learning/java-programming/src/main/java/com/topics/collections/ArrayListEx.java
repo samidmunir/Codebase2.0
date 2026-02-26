@@ -44,7 +44,7 @@ public class ArrayListEx {
         * Allows null values.
     */
     public static void main(String[] args) {
-        System.out.println("\nCollections in Java\n--------------------\n");
+        System.out.println("\nArrayList in Java\n--------------------\n");
 
         List<Integer> nums = new ArrayList<>();
         nums.add(1);
