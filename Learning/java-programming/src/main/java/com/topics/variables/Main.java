@@ -1,5 +1,8 @@
 package com.topics.variables;
 
+/*
+    Variables, Data Types, and Operators in Java
+*/
 public class Main {
     /*
         A Java variable is a data container or a named location (reference) capable of storing data. We can declare variables in Java by stating the data type, followed by the variable name/reference, and then an equals sign, and then finally the value want to store.
@@ -87,5 +90,71 @@ public class Main {
         
         long myLong = 999999999;
         System.out.println("long myLong = " + myLong);
+
+        /*
+            Operators in Java
+            * Aithmetic operators - mathematical operations on variables and value literals.
+            * Relational operators - used to compare to operands, and return a boolean (true or false).
+            * Conditional operators - used on boolean operands (mathematical boolean algebra).
+                > &&
+                > ||
+                > ! (inverse/not)
+            * Assignment operators
+                > +=
+                > -=
+                > *=
+                > /=
+                > %=
+        */
+        int a = 10, b = 20, c = 15, d = 25;
+        System.out.println("\na = " + a);
+        System.out.println("b  " + b);
+        System.out.println("c = " + c);
+        System.out.println("d = " + d);
+
+        int sum = a + b;
+        System.out.println("\na + b = " + sum);
+        int difference = a - b;
+        System.out.println("a - b = " + difference);
+        int product = a * b;
+        System.out.println("a * b = " + product);
+        float quotient = (float) d / (float) c;
+        System.out.println("d / c = " + quotient);
+        int mod = d % c;
+        System.out.println("d % c = " + mod);
+
+        /*
+            Increment/Decrement Operators:
+            1. Pre-increment - the value is incremented first and then assigned or used in an expression.
+            2. Post-increment - the value is first assigned or used in an expression, and then incremented.
+
+            These operators will not work/operate on variables that are constants or literals.
+            * We cannot nest these kind of operators.
+
+            We can apply these operators on all primitive data types except boolean type.
+        */
+        a++;
+        System.out.println("\na++ = " + a);
+        b--;
+        System.out.println("b-- = "+ b);
+
+        final int temp = 10; // this variable is a final variable (immutable/not-modifiable).
+        System.out.println("\ntemp = " + temp);
+
+        System.out.println("\na == b: " + (a == b));
+        System.out.println("a < b: " + (a < b));
+        System.out.println("a > b: " + (a > b));
+        System.out.println("a <= b: " + (a <= b));
+        System.out.println("a >= b: " + (a >= b));
+
+        /*
+            Implicit vs. Explicit Type Casting
+
+            Implicit - smaller type assigned to larger type (smaller data type -> larger data type). This is also known as widening.
+            * byte -> short -> int -> long -> float -> double
+            * char -> int
+
+            Explicit - larger type assigned to smaller type (not performed by JVM/compiler, we as developers must do this).
+        */
     }
 }
