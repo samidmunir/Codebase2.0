@@ -5,6 +5,8 @@
     - The Rust compiler will also infer the type of the variable based on the value stored (if not explicitly specified by the developer).
 
     Interpolation
+    - We can print variables to the terminal using the println!() macro, by placing String literals in "" and interpolating variables by using {}. After ending our String, we can pass variable names as arguments for each pair of curly braces. We can also pass variable names directly within the {} and not pass variable names as arguments to println!().
+    - When we pass positional arguments to the println!() macro, Rust assigns numerical correlations/indices to each starting from 0.
 
     Positional arguments to println!()
 
@@ -26,6 +28,15 @@
 fn main() {
     println!("\nVariables, Data Types, Mutability in Rust programming!");
 
-    let number_of_lines = 253;
-    println!("\nnumber_of_lines = {}", number_of_lines);
+    let lines_of_code: i32 = 253;
+    println!("\nlines_of_code = {}", lines_of_code);
+    let more_lines_of_code: i32 = 173;
+    println!("more_lines_of_code = {}", more_lines_of_code);
+    let total_lines_of_code = lines_of_code + more_lines_of_code;
+    println!("total_lines_of_code = {} + {} = {}", lines_of_code, more_lines_of_code, total_lines_of_code);
+
+    let a = 3;
+    let b = 1;
+    let c = 2; 
+    println!("\n{1}, {2}, {0}", a, b, c);
 }
