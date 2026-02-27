@@ -1,6 +1,11 @@
 mod inventory;
 mod orders;
 
+use inventory::MANAGER;
+// use inventory::products::ProductCategory;
+// use inventory::products::Item;
+use inventory::products::{ProductCategory, Item};
+
 /*
     3 ways to declare a module.
     1) in-line declaration
@@ -13,6 +18,14 @@ mod orders;
     1) inline
     2) inventory/products.rs
     3) inventory/products/mod.rs
+
+    This creates a hierarchial data structure of files and folders (modules). The top most node is the crate root.
+
+    There are two ways to reach a module.
+    - An absolute path is the full complete path to name starting from the crate root.
+    - A relative path is the path to a name starting from the current location or module.
+
+    The use keyword brings a name into the current scope. It creates a "shortcut" to a name in a nested module.
 */
 fn main() {
     println!("\nWarehouse Project");
@@ -20,7 +33,7 @@ fn main() {
         "- This project is intended to understand Rust file/folder structuring (modules & crates)."
     );
 
-    println!("\nThe manager of our inventory is {}.", inventory::MANAGER);
+    println!("\nThe manager of our inventory is {}.", MANAGER);
     println!(
         "The available floor space is {} sqft.",
         inventory::FLOOR_SPACE
@@ -31,10 +44,10 @@ fn main() {
     println!("The available floor space is {} sqft.", orders::FLOOR_SPACE);
     orders::talk_to_manager();
 
-    let favorite_category = inventory::products::ProductCategory::Ladder;
+    let favorite_category = ProductCategory::Ladder;
     println!("\nMy favorite category of items is {favorite_category:?}.");
 
-    let tall_ladder = inventory::products::Item {
+    let tall_ladder = Item {
         name: String::from("Premium Folding Ladder"),
         category: favorite_category,
         quantity: 10,
