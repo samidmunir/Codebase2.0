@@ -8,6 +8,11 @@ mod orders;
     3) folder with the name of the module, with a mod.rs file within it
 
     The Rust compiler will throw an error/warning when it finds two or modules with the same name.
+
+    A submodule is a module that lives with another module (sub/child module).
+    1) inline
+    2) inventory/products.rs
+    3) inventory/products/mod.rs
 */
 fn main() {
     println!("\nWarehouse Project");
@@ -26,10 +31,10 @@ fn main() {
     println!("The available floor space is {} sqft.", orders::FLOOR_SPACE);
     orders::talk_to_manager();
 
-    let favorite_category = inventory::ProductCategory::Ladder;
+    let favorite_category = inventory::products::ProductCategory::Ladder;
     println!("\nMy favorite category of items is {favorite_category:?}.");
 
-    let tall_ladder = inventory::Item {
+    let tall_ladder = inventory::products::Item {
         name: String::from("Premium Folding Ladder"),
         category: favorite_category,
         quantity: 10,
