@@ -1,30 +1,15 @@
-mod inventory {
-    pub const FLOOR_SPACE: i32 = 10000;
-    pub const MANAGER: &str = "Sami M.";
-
-    #[derive(Debug)]
-    enum ProductCategory {
-        Ladder,
-        Hammer,
-    }
-
-    #[derive(Debug)]
-    struct Item {
-        name: String,
-        category: ProductCategory,
-        quantity: u32,
-    }
-
-    pub fn talk_to_manager() {
-        println!("\ninventory.talk_to_manager() called...");
-        println!("- Hey, {MANAGER}, how was your coffee?");
-    }
-}
+mod inventory;
 
 mod orders {
     pub const MANAGER: &str = "Oliver Orderson";
 }
 
+/*
+    3 ways to declare a module.
+    1) in-line declaration
+    2) file with the name of the modules
+    3) //
+*/
 fn main() {
     println!("\nWarehouse Project");
     println!(
