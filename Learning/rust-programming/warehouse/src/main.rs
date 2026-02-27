@@ -1,10 +1,10 @@
 mod inventory;
 mod orders;
 
-use inventory::MANAGER;
+use inventory::{FLOOR_SPACE, MANAGER, talk_to_manager};
 // use inventory::products::ProductCategory;
 // use inventory::products::Item;
-use inventory::products::{ProductCategory, Item};
+use inventory::products::{self, ProductCategory};
 
 /*
     3 ways to declare a module.
@@ -25,7 +25,7 @@ use inventory::products::{ProductCategory, Item};
     - An absolute path is the full complete path to name starting from the crate root.
     - A relative path is the path to a name starting from the current location or module.
 
-    The use keyword brings a name into the current scope. It creates a "shortcut" to a name in a nested module.
+    The use keyword brings a name into the current scope. It creates a "shortcut" to a name in a nested module. There can be only one existence of a name within a single file.
 */
 fn main() {
     println!("\nWarehouse Project");
@@ -34,11 +34,8 @@ fn main() {
     );
 
     println!("\nThe manager of our inventory is {}.", MANAGER);
-    println!(
-        "The available floor space is {} sqft.",
-        inventory::FLOOR_SPACE
-    );
-    inventory::talk_to_manager();
+    println!("The available floor space is {} sqft.", FLOOR_SPACE);
+    talk_to_manager();
 
     println!("\nThe manager of our orders is {}.", orders::MANAGER);
     println!("The available floor space is {} sqft.", orders::FLOOR_SPACE);
@@ -47,7 +44,7 @@ fn main() {
     let favorite_category = ProductCategory::Ladder;
     println!("\nMy favorite category of items is {favorite_category:?}.");
 
-    let tall_ladder = Item {
+    let tall_ladder = products::Item {
         name: String::from("Premium Folding Ladder"),
         category: favorite_category,
         quantity: 10,
