@@ -16,8 +16,15 @@
     - The mut keyword allows a variable to be mutable (or changed in the lifetime of the program).
 
     Rust error codes
+    - The Rust compiler will provide error codes which we can copy and use the rustc --explain <code> command to allow the Rust compiler to help us understand they exact error. It will provide extensive documentation within the terminal.
+    - We can also visit the Rust Error Codes Index online to view a list of all Rust error codes.
 
     Variable shadowing
+    - This means we are redeclaring a variable. The original variable is replaced by the new one. The original one becomes invalid or over-shadowed.
+        > same name
+        > new type
+        > different value
+        > this is different from variable reassignment.
 
     Scopes & blocks
 
@@ -49,4 +56,19 @@ fn main() {
     println!("\ntax_rate: {}", tax_rate);
     tax_rate = 1.47892;
     println!("tax_rate: {}", tax_rate);
+
+    /*
+        For Rust Error Code example...
+    */
+    // let x = 0;
+    // x = 1;
+
+    let grams_of_protein: &str = "100.345";
+    println!("\ngrams_of_protein: {} (&str)", grams_of_protein);
+    let grams_of_protein = 100.345;
+    println!("grams_of_protein: {} (f64)", grams_of_protein);
+    let grams_of_protein = 100;
+    println!("grams_of_protein: {} (i32)", grams_of_protein);
+    let grams_of_protein = 95;
+    println!("grams_of_protein: {} (i32)", grams_of_protein);
 }
